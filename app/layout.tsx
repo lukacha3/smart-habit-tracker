@@ -12,6 +12,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Smart Habit Tracker",
   description: "Registra tus hábitos con lenguaje natural",
+  manifest: "/manifest.json", // Vinculamos el DNI
+};
+
+// En Next.js moderno, el themeColor va en una exportación separada
+export const viewport = {
+  themeColor: "#2563eb", // El color azul de tus botones
 };
 
 // Fijate que le agregamos la palabra "async" acá
