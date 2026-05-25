@@ -1,5 +1,6 @@
 import HabitInput from "@/components/HabitInput";
 import Dashboard from "@/components/Dashboard";
+import Planner from "@/components/Planner";
 
 export default function Home() {
   return (
@@ -7,17 +8,21 @@ export default function Home() {
       
       <div className="text-center mb-8 mt-4">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
-          Seguí tu ritmo natural
+          Sigue tu ritmo natural
         </h1>
         <p className="text-lg text-gray-600 max-w-xl mx-auto">
-          Escribí lo que hiciste hoy como si se lo contaras a un amigo. La inteligencia artificial se encarga de organizarlo.
+          Escribe lo que quieres hacer hoy.
+        </p> 
+        <p className="text-lg text-gray-600 max-w-xl mx-auto">
+          La IA se encargara de organizarlo.
         </p>
       </div>
 
-      <HabitInput />
+      <Planner />
       
+      {/* <HabitInput /> */}
       {/* Acá renderizamos tu nuevo tablero analítico */}
-      <Dashboard />
+      {/* <Dashboard /> */}
 
     </div>
   );
