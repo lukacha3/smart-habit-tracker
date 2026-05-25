@@ -1,15 +1,31 @@
 @import "tailwindcss";
 
+/* Esto reemplaza el darkMode: "class" del config */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Esto reemplaza el theme.extend.colors del config */
+@theme {
+  --color-nord-0: #2E3440;
+  --color-nord-1: #3B4252;
+  --color-nord-2: #434C5E;
+  --color-nord-3: #4C566A;
+  --color-nord-4: #D8DEE9;
+  --color-nord-5: #E5E9F0;
+  --color-nord-6: #ECEFF4;
+  --color-nord-7: #8FBCBB;
+  --color-nord-8: #88C0D0;
+  --color-nord-9: #81A1C1;
+  --color-nord-10: #5E81AC;
+  --color-nord-11: #BF616A;
+  --color-nord-12: #D08770;
+  --color-nord-13: #EBCB8B;
+  --color-nord-14: #A3BE8C;
+  --color-nord-15: #B48EAD;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {

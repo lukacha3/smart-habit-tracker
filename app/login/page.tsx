@@ -45,7 +45,7 @@ export default function LoginPage() {
   };
 
   return (
-      <div className="max-w-md mx-auto mt-20 p-8 bg-white rounded-lg shadow-md border border-gray-200">
+      <div className="max-w-md mx-auto mt-20 p-8 bg-white dark:bg-nord-1 rounded-lg shadow-md border border-gray-200">
           
           {/* Enlace de escape para volver a la página principal */}
           <Link 
@@ -65,7 +65,7 @@ export default function LoginPage() {
           placeholder="tu@email.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
+          className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 dark:text-nord-5 bg-white dark:bg-nord-1"
           required
         />
         <input
@@ -73,7 +73,7 @@ export default function LoginPage() {
           placeholder="Contraseña (mínimo 6 caracteres)"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
+          className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 dark:text-nord-5 bg-white dark:bg-nord-1"
           required
         />
         
@@ -83,7 +83,7 @@ export default function LoginPage() {
           disabled={loading}
           className={`w-full p-3 text-white font-semibold rounded-md transition mt-2 disabled:bg-gray-400 ${
             isLoginMode 
-              ? "bg-blue-600 hover:bg-blue-700" 
+              ? "bg-blue-600 dark:bg-nord-10 hover:bg-blue-700" 
               : "bg-green-600 hover:bg-green-700"
           }`}
         >

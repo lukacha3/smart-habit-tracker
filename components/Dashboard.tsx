@@ -36,12 +36,12 @@ export default function Dashboard() {
   // ESTADO VISUAL 1: Cargando datos
   if (isLoading) {
     return (
-      <div className="w-full max-w-4xl mx-auto mt-12 p-8 bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col items-center justify-center min-h-[300px]">
+      <div className="w-full max-w-4xl mx-auto mt-12 p-8 bg-white dark:bg-nord-1 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center justify-center min-h-[300px]">
         <svg className="animate-spin h-8 w-8 text-blue-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
         </svg>
-        <p className="text-gray-500 font-medium">Analizando tus estadísticas...</p>
+        <p className="text-gray-500 dark:text-nord-3 font-medium">Analizando tus estadísticas...</p>
       </div>
     );
   }
@@ -49,10 +49,10 @@ export default function Dashboard() {
   // ESTADO VISUAL 2: Aún no hay datos en Supabase
   if (habits.length === 0) {
     return (
-      <div className="w-full max-w-4xl mx-auto mt-12 p-8 bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col items-center justify-center min-h-[300px]">
+      <div className="w-full max-w-4xl mx-auto mt-12 p-8 bg-white dark:bg-nord-1 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center justify-center min-h-[300px]">
         <span className="text-4xl mb-3">📊</span>
         <h3 className="text-lg font-bold text-gray-800">Tu tablero está vacío</h3>
-        <p className="text-gray-500 mt-2 text-center max-w-md">
+        <p className="text-gray-500 dark:text-nord-3 mt-2 text-center max-w-md">
           Aún no tenés datos para mostrar. Registrá tu primer hábito usando el buscador de arriba y el gráfico se armará solo.
         </p>
       </div>
@@ -73,7 +73,7 @@ export default function Dashboard() {
 
   // ESTADO VISUAL 3: Renderizado exitoso del gráfico
   return (
-    <div className="w-full max-w-4xl mx-auto mt-12 p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+    <div className="w-full max-w-4xl mx-auto mt-12 p-6 bg-white dark:bg-nord-1 rounded-xl shadow-sm border border-gray-100">
       <h2 className="text-xl font-bold text-gray-800 mb-6 px-2">Tus Hábitos por Categoría</h2>
       
       <div className="w-full h-[350px]">

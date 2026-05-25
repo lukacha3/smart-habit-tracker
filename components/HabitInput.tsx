@@ -60,7 +60,7 @@ export default function HabitInput() {
             onChange={(e) => setHabitText(e.target.value)}
             disabled={isLoading}
             placeholder="Ej: Estudié 3 horas de Java ayer a la noche..."
-            className="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition disabled:bg-gray-100 disabled:text-gray-500 text-gray-900 bg-white"
+            className="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition disabled:bg-gray-100 disabled:text-gray-500 dark:text-nord-3 text-gray-900 dark:text-nord-5 bg-white dark:bg-nord-1"
             autoComplete="off"
           />
         </div>
@@ -68,7 +68,7 @@ export default function HabitInput() {
         <button
           type="submit"
           disabled={isLoading || !habitText.trim()}
-          className="flex items-center justify-center min-w-[140px] p-4 bg-blue-600 text-white font-semibold rounded-lg shadow-sm hover:bg-blue-700 disabled:bg-blue-400 transition"
+          className="flex items-center justify-center min-w-[140px] p-4 bg-blue-600 dark:bg-nord-10 text-white font-semibold rounded-lg shadow-sm hover:bg-blue-700 disabled:bg-blue-400 transition"
         >
           {isLoading ? (
             <>
