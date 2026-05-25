@@ -60,24 +60,53 @@ sequenceDiagram
 
 
 ### Modelo de Datos (Esquema de Base de Datos)
-```mermaid
-erDiagram
-    HABITS {
-        uuid id PK "Primary Key"
-        uuid user_id FK "Clave foránea de Auth"
-        text raw_text "Texto original"
-        text category "Categoría parseada"
-        real quantity "Valor numérico"
-        text unit "Unidad de medida"
-        timestamptz date "Fecha exacta"
-    }
-    TASKS {
-        uuid id PK "Primary Key"
-        uuid user_id FK "Clave foránea de Auth"
-        text titulo "Descripción de la acción"
-        text estado "pendiente | completado"
-        date fecha_objetivo "Fecha de ejecución"
-        time hora_inicio "HH:MM:SS"
-        time hora_fin "HH:MM:SS"
-    }
-```
+
+## Table `habits`
+
+| Name | Type | Constraints |
+|------|------|-------------|
+| `id` | `uuid` | Primary |
+| `user_id` | `uuid` |  |
+| `fecha` | `date` |  |
+| `categoria` | `text` |  |
+| `cantidad` | `numeric` |  |
+| `unidad` | `text` |  |
+| `texto_original` | `text` |  |
+| `created_at` | `timestamptz` |  |
+
+## Table `moods`
+
+| Name | Type | Constraints |
+|------|------|-------------|
+| `id` | `uuid` | Primary |
+| `user_id` | `uuid` |  |
+| `fecha` | `date` |  |
+| `nivel` | `int4` |  |
+| `created_at` | `timestamptz` |  |
+
+## Table `notes`
+
+| Name | Type | Constraints |
+|------|------|-------------|
+| `id` | `uuid` | Primary |
+| `user_id` | `uuid` |  |
+| `fecha` | `date` |  |
+| `texto` | `text` |  |
+| `created_at` | `timestamptz` |  |
+| `updated_at` | `timestamptz` |  |
+
+## Table `tasks`
+
+| Name | Type | Constraints |
+|------|------|-------------|
+| `id` | `uuid` | Primary |
+| `user_id` | `uuid` |  |
+| `titulo` | `text` |  |
+| `fecha_objetivo` | `date` |  |
+| `estado` | `text` |  Nullable |
+| `duracion_estimada` | `numeric` |  Nullable |
+| `duracion_tipo` | `text` |  Nullable |
+| `created_at` | `timestamptz` |  |
+| `hora_inicio` | `time` |  Nullable |
+| `hora_fin` | `time` |  Nullable |
+
